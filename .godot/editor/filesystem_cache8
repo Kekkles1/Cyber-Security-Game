@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747245840
+::res://::1747249408
+character_body_2d.gd::GDScript::-1::1747246780::0::1::::<>CharacterBody2D<>::
 icon.svg::CompressedTexture2D::2405931087944882095::1747244481::1747244496::1::::<><>::
+player.tscn::PackedScene::958837081255888506::1747246882::0::1::::<><>::res://character_body_2d.gd<>uid://bajpllsgdvmkt::::res://icon.svg
 README.md::TextFile::-1::1747245158::0::1::::<><>::
-::res://Assets/::1747245894
+::res://Assets/::1747245895
 tileset x1.png::CompressedTexture2D::6348352513137070278::1747245894::1747245894::1::::<><>::
 tileset x2.png::CompressedTexture2D::1528618465099619433::1747245894::1747245894::1::::<><>::
 tileset x3.png::CompressedTexture2D::729361681625837583::1747245894::1747245895::1::::<><>::

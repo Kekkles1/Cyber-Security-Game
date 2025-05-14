@@ -1,9 +1,130 @@
-[gd_scene load_steps=4 format=3 uid="uid://nwp53cuirytm"]
+[gd_scene load_steps=19 format=3 uid="uid://nwp53cuirytm"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_tsen7"]
-[ext_resource type="Texture2D" uid="uid://bajpllsgdvmkt" path="res://icon.svg" id="2_fc15q"]
+[ext_resource type="Texture2D" uid="uid://cxssontt2rlff" path="res://Assets/Players/players blue x2.png" id="2_8vqlk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltk4x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y31jx"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07nr0"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh8ot"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yfqo"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irevt"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6182y"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmkn5"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7kkm"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orcdp"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8foo4"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf6pm"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jikvn"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftbdw"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ptdd"]
+atlas = ExtResource("2_8vqlk")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nwjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y31jx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07nr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh8ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yfqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irevt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6182y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmkn5")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7kkm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orcdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8foo4")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf6pm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jikvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftbdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ptdd")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,9 +132,8 @@
 script = ExtResource("1_tsen7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(679, 364)
+position = Vector2(0, 18)
 shape = SubResource("CapsuleShape2D_ltk4x")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(675, 363)
-texture = ExtResource("2_fc15q")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_1nwjf")

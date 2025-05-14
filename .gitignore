@@ -1,9 +1,36 @@
-# Godot-specific
+# Godot-specific folders
 .import/
-export.cfg
+.godot/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# User/editor config (optional: remove if you want to share editor layout/settings)
+*.cfg
+*.ini
 export_presets.cfg
 
-# System files
+# Godot backup files
 *.tmp
-*.log
-.DS_Store
+*.bak
+*.converted.*
+*.imported.*
+
+# Debug export output
+bin/
+build/
+*.pck
+*.exe
+*.zip
+
+# Godot Mono (C#) specific (if you're not using Mono, this is harmless)
+.mono/
+*.csproj
+*.sln
+*.user
+*.vs/
+.vscode/
+
+# Optional: crash dumps or logs
+crash_dump.*
